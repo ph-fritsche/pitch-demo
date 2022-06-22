@@ -49,6 +49,15 @@
             "tests/bootstrap.php"
         ]
     },
+    "pitch/annotation": {
+        "version": "v1.0.0"
+    },
+    "pitch/form": {
+        "version": "v1.1.0"
+    },
+    "pitch/symfony-adr": {
+        "version": "v1.4.0"
+    },
     "sensio/framework-extra-bundle": {
         "version": "6.2",
         "recipe": {

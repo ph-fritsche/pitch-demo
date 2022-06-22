@@ -12,4 +12,7 @@ return [
     Symfony\Bundle\MonologBundle\MonologBundle::class => ['all' => true],
     Symfony\Bundle\MakerBundle\MakerBundle::class => ['dev' => true],
     Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle::class => ['all' => true],
+    Pitch\Annotation\PitchAnnotationBundle::class => ['all' => true],
+    Pitch\Form\PitchFormBundle::class => ['all' => true],
+    Pitch\AdrBundle\PitchAdrBundle::class => ['all' => true],
 ];
