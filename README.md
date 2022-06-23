@@ -1,11 +1,6 @@
 # Pitch Demo
 
-This repository holds the code and script
-for the(https://symfonycasts.com/screencast/api-platform) course on SymfonyCasts.  
-
-## Setup
-
-By default, the demo uses sqlite.  If you want to use another datatabase, configure DATABASE_URL in .env.local
+A simple "to-do" demo that uses implements a CRUD controller using the ADR design pattern, using https://github.com/ph-fritsche/symfony-adr
 
 **Download and Setup**
 
@@ -23,7 +18,14 @@ on how you installed Composer.
 
 **Configure the .env (or .env.local) File**
 
-The default database is sqlite, so the ext-sqlite should be installed, or set DATABASE_URL in .env.local to use another database.
+## Setup
+
+Create .env.local and configure the path to the database, e.g.
+
+```.dotenv
+DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db"
+```
+
 
 **Setup the Database**
 
@@ -52,9 +54,6 @@ project, and run:
 symfony serve
 ```
 
-(If this is your first time using this command, you may see an
-error that you need to run `symfony server:ca:install` first).
-
 Now check out the site at `https://localhost:8000`
 
 ## Dependencies
@@ -64,3 +63,8 @@ phf/collection is a utility to express someType[]. It is not necessary to use it
 pitch/symfony-adr provides the separation of Response and Action. Just like you define classes for entities that you store in the database, you should create entity classes for payload created at runtime, e.g. a paginated table page as response to a search endpoint. Then you add handlers to convert these entities into a response that is acceptable for the client. For a browser view this might be HTML and for a JS client library that might be JSON and for a spreadsheet export this might be XLSX.
 
 pitch/form allows you to remove the reoccurring form handling from controllers and just deal with the submitted and valid form there. If you use it with pitch/symfony-adr, you can add handlers to convert the FormInterface for GET and invalid POST requests into responses that are acceptable for the client.
+
+## Further Resources
+
+* https://github.com/mdzwigala/adr-symfony-example
+* https://medium.com/swlh/implementing-action-domain-responder-pattern-with-symfony-606539eea3a7
